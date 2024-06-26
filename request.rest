@@ -1,0 +1,147 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/4
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "role": "admin"
+}
+
+###
+PATCH  http://localhost:5000/users/2
+Content-Type: application/json
+
+{
+    "name": "User 22",
+    "email": "user2@yahoo.com",
+    "role": "user"
+}
+###
+DELETE http://localhost:5000/users/1
+
+###
+# Login url
+POST http://localhost:5000/login/
+Content-Type: application/json
+
+{
+    "email": "user2@yahoo.com",
+    "password": "user"
+}
+
+###
+GET http://localhost:5000/logout/4
+
+###
+POST  http://localhost:5000/biodata
+Content-Type: application/json
+
+{
+    "no_alumni": "202400003",
+    "nim": "2024010203003",
+    "nama": "Dani Hartanto",
+    "jenis_kelamin": "Laki-laki",
+    "alamat": "Jl. Sehat Sejahtera Nomor 2B, Keputih, Surabaya, Jawa Timur",
+    "kode_pos": "62981",
+    "tempat_lahir": "Surabaya",
+    "tanggal_lahir": "2000-03-01",
+    "user_id": 9
+}
+
+###
+GET http://localhost:5000/biodata
+
+###
+GET http://localhost:5000/biodata/3
+###
+PATCH http://localhost:5000/biodata/1
+Content-Type: application/json
+
+{
+    "no_alumni": "202400001",
+    "nim": "2024010203001",
+    "nama": "Mochamad Dani H",
+    "jenis_kelamin": "Laki-laki",
+    "alamat": "Jl. Sehat Sejahtera Nomor 2B, Keputih, Surabaya, Jawa Timur",
+    "kode_pos": "62981",
+    "tempat_lahir": "Surabaya",
+    "tanggal_lahir": "2002-03-01",
+    "user_id": 9
+}
+###
+DELETE http://localhost:5000/biodata/4
+
+
+###
+POST http://localhost:5000/api/biodata/akademik/create
+Content-Type: application/json
+Bearer: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcxNDgwNDkwMCwiZXhwIjoxNzE0ODkxMzAwfQ.haUMN4wKXWVzaoZzQqgyYWR7xFdcB26GBk2YMXASRbI"
+
+{
+    "angkatan": "2016",
+    "tahun_lulus": "2021",
+    "tanggal_yudisium": "2021-03-01",
+    "ipk": "3.78",
+    "lama_studi": "4",
+    "nilai_toefl": "480",
+    "studi_lanjut": 0,
+    "user_id": 4
+}
+
+###
+GET http://localhost:5000/akademi
+
+###
+GET http://localhost:5000/akademi/2
+###
+PATCH http://localhost:5000/akademi/2
+Content-Type: application/json
+
+{
+    "angkatan": "2005",
+    "tahun_lulus": "2020",
+    "tanggal_yudisium": "2020-03-01",
+    "ipk": "3.71",
+    "lama_studi": "4",
+    "nilai_toefl": "520",
+    "studi_lanjut": 0,
+    "user_id": 2
+}
+###
+DELETE http://localhost:5000/akademi/4
+
+
+###
+GET http://localhost:5000/pekerjaan
+
+###
+GET http://localhost:5000/pekerjaan/1
+
+###
+POST  http://localhost:5000/pekerjaan
+Content-Type: application/json
+
+{
+    "is_working": "1",
+    "is_looking_for_job": "0",
+    "user_id": 2
+}
+
+###
+PATCH http://localhost:5000/pekerjaan/1
+Content-Type: application/json
+
+{
+    "is_working": 1,
+    "is_looking_for_job": 0,
+    "user_id": 9
+}
+###
+DELETE http://localhost:5000/pekerjaan/15
